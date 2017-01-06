@@ -1,7 +1,9 @@
 var apiKey = require('./../.env').apiKey;
 
 function Search(issue) {
+
   this.issue = issue;
+
 }
 
 Search.prototype.searchIssue = function (issue) {
@@ -10,25 +12,13 @@ Search.prototype.searchIssue = function (issue) {
 
     var doctors = response.data;
 
-    console.log(response);
-
     doctors.forEach(function(doctor) {
 
       var name = doctor.profile.first_name + " " + doctor.profile.last_name;
-
       var img = doctor.profile.image_url;
+      var title = doctor.specialties[0].actor;
 
-      var specialties = doctor.specialties;
-
-      console.log(specialties);
-
-      specialties.forEach(function(titles){
-        var title = titles.actor;
-
-      });
-
-
-      $(".main__results").append("<div class='main__results__doctors'>" + "<h1>" + name + "</h1>" + "<img src=" + img + " />" + "<div>");
+      $(".main__results").append("<div class='main__results__doctors'>" + "<h1>" + name + "</h1>" + "<img src=" + img + " />" + "<p>" + title + "</p>" + "<div>");
 
     });
 

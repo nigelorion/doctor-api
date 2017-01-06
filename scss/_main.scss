@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Candal|Prata');
 
-
-
 .main {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   font-family: 'Candal', sans-serif;
+  color: gray;
+  &__title {
+    margin-bottom: 3%;
+  }
+
   &__form {
     margin: 5%;
     font-size: 2em;
     height: 100%;
     display: flex;
     align-items: center;
+      color: lightblue;
     & input {
       font-size: 1em;
     }
@@ -31,27 +35,30 @@
     flex-wrap: wrap;
     justify-content: center;
     &__doctors {
-      background-color: lightblue;
-      padding: 2%;
+      background-color: rgba(76, 132, 156, 0.63);
+      flex-wrap: wrap;
+      padding: 1%;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;;
+      flex-direction: column;
       align-items: center;
       margin: 1%;
       border: 2px solid rgba(90, 116, 115, 0.69);
-      width: 260px;
-      height: 140px;
       transition: all 200ms ease-in-out;
+      width: 260px;
+      text-align: center;
       &:hover {
         transform: scale(1.1);
         cursor: pointer;
+        background-color: rgba(126, 185, 185, 0.71);
       }
       h1 {
         font-size: 1.5em;
         color: white;
-        flex: 1;
       }
       img {
         border: solid 2px white;
+
       }
     }
   }
