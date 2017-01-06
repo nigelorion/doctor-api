@@ -12,13 +12,16 @@ Search.prototype.searchIssue = function (issue) {
 
     var doctors = response.data;
 
+    console.log(response);
+
     doctors.forEach(function(doctor) {
 
       var name = doctor.profile.first_name + " " + doctor.profile.last_name;
       var img = doctor.profile.image_url;
       var title = doctor.specialties[0].actor;
+      var phone = doctor.practices[0].phones[0].number;
 
-      $(".main__results").append("<div class='main__results__doctors'>" + "<h1>" + name + "</h1>" + "<img src=" + img + " />" + "<p>" + title + "</p>" + "<div>");
+      $(".main__results").append("<div class='main__results__doctors'>" + "<h1>" + name + "</h1>" + "<img src=" + img + " />" + "<p>" + title + "</p>" + "<p>" + phone + "</p>" + "<div>");
 
     });
 
