@@ -1,1 +1,21 @@
+.main {
+  &__results {
+    display: flex;
+    flex-wrap: wrap;
+    &__doctors {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3%;
+      border: 2px solid lightblue;
+      flex: 1;
+      width: 300px;
+      height: 300px;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 
+}
