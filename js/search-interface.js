@@ -10,7 +10,7 @@ $(function() {
     var issue = $("#issue").val();
 
     var search = new Search();
-    
+
     search.searchIssue(issue);
 
   });
